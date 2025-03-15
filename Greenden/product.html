@@ -16,8 +16,8 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-2xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="md:hidden" width="21" height="21" fill="none" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" class="md:hidden cursor-pointer" width="21" height="21"
+            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
 
@@ -31,10 +31,24 @@
 
     </nav>
 
+    <!--Side Navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%;height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="close" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col text-gray-600 items-center gap-10  ">
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="product.html">Products</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact</a></li>
+        </ul>
+
+    </section>
+
     <!--New Letter-->
     <section class="text-center">
         <h1 class="text-3xl font-bold mt-5 text-center">Our Products</h1>
-        <input type="text" placeholder="Search for a Products..." class="border border-black p-2 m-3 "
+        <input id="search" type="text" placeholder="Search for a Products..." class="border border-black p-2 m-3 "
             style="width: 80%;">
         <br>
     </section>
@@ -42,7 +56,7 @@
     <!--Best Seller-->
     <section class="p-4 text-center">
 
-        <div class="grid grid-cols-2 mt-5 gap-5 md:grid-cols-4">
+        <div id="product-container" class="grid grid-cols-2 mt-5 gap-5 md:grid-cols-4">
             <div>
                 <img src="./images/rosepot1.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="picture">
@@ -70,36 +84,36 @@
                 <h1>Lilly Plant</h1>
                 <p>$20 </p>
             </div>
-        </div>
 
-        <div class="grid grid-cols-2 mt-5 gap-5 md:grid-cols-4">
+
             <div>
                 <img src="./images/flower1.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="picture">
-                <h1>Rose Plant</h1>
+                <h1>Orchid</h1>
                 <p>$20 </p>
             </div>
 
             <div>
                 <img src="./images/flower2.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="picture">
-                <h1>Pink Rose </h1>
+                <h1>Jasmine</h1>
                 <p>$20 </p>
             </div>
 
             <div>
                 <img src="./images/flower3.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="picture">
-                <h1>Orange Plant</h1>
+                <h1>Marigold</h1>
                 <p>$20 </p>
             </div>
 
             <div>
                 <img src="./images/flower4.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
                     alt="picture">
-                <h1>Lilly Plant</h1>
+                <h1>Tulip</h1>
                 <p>$20 </p>
             </div>
+        </div>
         </div>
 
     </section>
@@ -111,6 +125,8 @@
             ullam.</p>
         <p>@2021 Greeden.com</p>
     </section>
+
+    <script src="product.js"></script>
 
 </body>
 
